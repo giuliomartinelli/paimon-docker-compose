@@ -14,7 +14,7 @@ services:
       - "${NODEJS_VOLUMES_FILES}:/usr/src/app"
     environment:
       - "NODE_ENV=${NODEJS_ENV}"
-    #command: sh -c "npm install && npm run start:dev"
+    command: sh -c "npm install && npm run start:dev"
     restart: always
 
   nginx:
@@ -22,7 +22,6 @@ services:
     ports:
       - "${NGINX_PORT}:${NGINX_PORT}"
     volumes:
-      - "${NGINX_VOLUMES_FILES}:/usr/share/nginx/html"
       - "${NGINX_VOLUMES_NGINX_CONF}:/etc/nginx/nginx.conf"
     command: ["nginx", "-g", "daemon off;"]
     depends_on:

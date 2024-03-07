@@ -25,7 +25,6 @@ configure o caminho do projeto node.js ./docker/.env.docker.local
 
 ```
 NODEJS_VOLUMES_FILES=/home/user/my_project_nodejs
-NGINX_VOLUMES_FILES=/home/user/my_project_nodejs
 ```
 
 
