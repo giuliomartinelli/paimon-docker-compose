@@ -10,13 +10,13 @@ Um docker-conposer configurado e pronto para uso no seu desenvolvimento local no
 OS X & Linux:
 
 ```sh
-docker-compose --env-file ./docker/.env.docker.local up
+docker-compose --env-file .env up
 ```
 
 Windows:
 
 ```sh
-docker-compose --env-file ./docker/.env.docker.local up
+docker-compose --env-file .env up
 ```
 
 ## Como configurar
@@ -68,6 +68,11 @@ Retire os comentarios ./docker/nginx/nginx.conf
 
 
 ## Histórico
+* 1.0.0
+    * novo container nginx-backend.
+    * novo container nginx-frontend.
+    * alteração pasta docker, .docker.
+    * alteração arquivo .env, example.env.
 * 0.0.2
     * correção portas e configuração correta expose das portas.
     * suporte SSL nginx.
