@@ -43,10 +43,9 @@ services:
       - ${NGINX_FRONTEND_SSL_PORT}  
     volumes:
       - "${NGINX_FRONTEND_VOLUMES_NGINX_CONF}:/etc/nginx/nginx.conf"
+      - "${NGINX_FRONTEND_VOLUMES_FILES}:/usr/share/nginx/html"
       #- "${NGINX_FRONTEND_VOLUMES_NGINX_SSL_CERTS}:/etc/nginx/certs"
     command: ["nginx", "-g", "daemon off;"]
-    depends_on:
-      - nodejs
     restart: always  
 
   mysql:
