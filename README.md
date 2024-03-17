@@ -68,6 +68,8 @@ Retire os comentarios ./docker/nginx/nginx.conf
 
 
 ## Histórico
+* 1.0.1
+    * atualização nginx-frontend.
 * 1.0.0
     * novo container nginx-backend.
     * novo container nginx-frontend.
