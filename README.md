@@ -5,6 +5,52 @@
 Um docker-conposer configurado e pronto para uso no seu desenvolvimento local node | nginx | mysql | mongodb.
 
 
+
+### Configuração
+
+- Renomeie o arquivo `example.env` para `.env`
+
+- Configure as seguintes variaveis de ambiente `.env`
+
+
+```
+NODEJS_VERSION=latest
+NODEJS_ENV=development
+NODEJS_VOLUMES_FILES=.
+NODEJS_PORT=3000
+
+NGINX_BACKEND_VERSION=latest
+NGINX_BACKEND_VOLUMES_NGINX_CONF=./.docker/nginx-backend/nginx.conf
+NGINX_BACKEND_VOLUMES_NGINX_SSL_CERTS=.
+NGINX_BACKEND_PORT=8010
+NGINX_BACKEND_SSL_PORT=4410
+
+NGINX_FRONTEND_VERSION=latest
+NGINX_FRONTEND_VOLUMES_FILES=.
+NGINX_FRONTEND_VOLUMES_NGINX_CONF=./.docker/nginx-frontend/nginx.conf
+NGINX_FRONTEND_VOLUMES_NGINX_SSL_CERTS=.
+NGINX_FRONTEND_PORT=8020
+NGINX_FRONTEND_SSL_PORT=4420
+
+MYSQL_VERSION=latest
+MYSQL_DATABASE=development
+MYSQL_USER=development
+MYSQL_PASSWORD=development
+MYSQL_ROOT_PASSWORD=development
+MYSQL_PORT=3306
+
+MONGO_VERSION=latest
+MONGO_DATABASE=development
+MONGO_USERNAME=development
+MONGO_PASSWORD=development
+MONGO_ROOT_USERNAME=development
+MONGO_ROOT_PASSWORD=development
+MONGO_PORT=27017
+
+```
+
+
+
 ## Como usar
 
 OS X & Linux:
@@ -21,7 +67,7 @@ docker-compose --env-file .env up
 
 ## Como configurar
 
-configure o caminho do projeto node.js ./docker/.env.docker.local
+configure o caminho do projeto node.js `.env
 
 ```
 NODEJS_VOLUMES_FILES=/home/user/my_project_nodejs
@@ -29,7 +75,7 @@ NODEJS_VOLUMES_FILES=/home/user/my_project_nodejs
 
 ## SSL
 
-configure o caminho de onde se encontra o certificado ./docker/.env.docker.local
+configure o caminho de onde se encontra o certificado `.env`
 
 ```
 NGINX_VOLUMES_NGINX_SSL_CERTS=/home/user/my_certs
